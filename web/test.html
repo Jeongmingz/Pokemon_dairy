@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/test.css">
+    <link rel="stylesheet" href="../static/css/test.scss">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    
+    <title>POKEMON-Dairy</title>
+</head>
+<body style="background-color: gray;">
+    <style>
+        /* Pikachu */
+.pikachu {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #FDE802;
+    border-radius: 50%;
+    margin: 100px auto;
+}
+
+/* Ears */
+.ear {
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    background-color: #FDE802;
+    border-radius: 50%;
+    top: -40px;
+}
+
+.left-ear {
+    left: 15px;
+    transform: rotate(-20deg);
+}
+
+.right-ear {
+    right: 15px;
+    transform: rotate(20deg);
+}
+
+/* Face */
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #FDE802;
+    border-radius: 50%;
+    top: 40px;
+    left: 50px;
+}
+
+/* Eyes */
+.eye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.left-eye {
+    top: 30px;
+    left: 30px;
+}
+
+.right-eye {
+    top: 30px;
+    right: 30px;
+}
+
+/* Nose */
+.nose {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FDE802;
+    border-radius: 50%;
+    top: 50px;
+    left: 45px;
+}
+
+/* Mouth */
+.mouth {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    border: 2px solid #000;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    transform: rotate(0deg);
+    top: 70px;
+    left: 30px;
+}
+
+/* Cheeks */
+.cheek {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    top: 80px;
+}
+
+.left-cheek {
+    left: 10px;
+}
+
+.right-cheek {
+    right: 10px;
+}
+
+    </style>
+    <div class="pikachu">
+        <div class="ear left-ear"></div>
+        <div class="ear right-ear"></div>
+        <div class="face">
+            <div class="eye left-eye"></div>
+            <div class="eye right-eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="cheek left-cheek"></div>
+        <div class="cheek right-cheek"></div>
+    </div>
+</body>
+</html>

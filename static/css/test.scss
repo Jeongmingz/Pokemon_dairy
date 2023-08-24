@@ -1,0 +1,559 @@
+$red: #ff3300;
+$skin: #ffe6e6;
+$purple: #9933ff;
+$sky-blue:  #1ad1ff;
+$blue:  #66ccff;
+$teal: #00cc99;
+$black: #000;
+$white: #fff;
+$orange: #ff9900;
+$dark-orange: #ff6600;
+$yellow: #ffff00;
+$path: #b8b894;
+$grass: #33cc33;
+$cloud: #e6e6e6;
+
+body {
+  margin: 0;
+}
+.pokemon-sky {
+  height: 70vh;
+  width: 100%;
+  background-color: $sky-blue;
+}
+.pokemon-grass {
+  height: 30vh;
+  width: 100%;
+  background-color: $grass;
+}
+
+.cloud {
+  &:after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    box-shadow:
+      32px 0 $cloud,
+      40px 0 $cloud,
+      48px 0 $cloud,
+      56px 0 $cloud,
+    
+      24px 8px $cloud,
+      32px 8px $white,
+      40px 8px $white,
+      48px 8px $white,
+      56px 8px $white,
+      64px 8px $cloud,
+      
+      16px 16px $cloud,
+      24px 16px $white,
+      32px 16px $white,
+      40px 16px $white,
+      48px 16px $white,
+      56px 16px $white,
+      64px 16px $white,
+      72px 16px $cloud,
+      
+      8px 24px $cloud,
+      16px 24px $white,
+      24px 24px $white,
+      32px 24px $white,
+      40px 24px $white,
+      48px 24px $white,
+      56px 24px $white,
+      64px 24px $white,
+      72px 24px $white,
+      80px 24px $cloud,
+      
+      0px 32px $cloud,
+      8px 32px $white,
+      16px 32px $white,
+      24px 32px $white,
+      32px 32px $white,
+      40px 32px $white,
+      48px 32px $white,
+      56px 32px $white,
+      64px 32px $white,
+      72px 32px $white,
+      80px 32px $white,
+      88px 32px $cloud,
+      
+      8px 40px $cloud,
+      16px 40px $cloud,
+      24px 40px $cloud,
+      32px 40px $cloud,
+      40px 40px $cloud,
+      48px 40px $cloud,
+      56px 40px $cloud,
+      64px 40px $cloud,
+      72px 40px $cloud,
+      80px 40px $cloud,
+      
+  } 
+}
+
+.cloud-1 {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+
+.cloud-2 {
+  position: absolute;
+  top: 15%;
+  left: 45%;
+}
+
+
+.cloud-3 {
+  position: absolute;
+  top: 10%;
+  left: 80%;
+}
+
+
+.cloud-4 {
+  position: absolute;
+  top: 20%;
+  left: 2%;
+}
+
+.trainer {
+  position: absolute;
+  top: calc(70vh - 100px);
+  left: 35%;
+  animation: bob 0.3s alternate infinite;
+  animation-timing-function: ease-out;
+
+   &:after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    box-shadow:
+      32px 0 $black,
+      40px 0 $black,
+      48px 0 $black,
+      56px 0 $black,
+      64px 0 $black,
+      
+      24px 8px $black,
+      32px 8px $red,
+      40px 8px $red,
+      48px 8px $red,
+      56px 8px $red,
+      64px 8px $red,
+      72px 8px $black,
+      
+      16px 16px $black,
+      24px 16px $red,
+      32px 16px $red,
+      40px 16px $red,
+      48px 16px $red,
+      56px 16px $red,
+      64px 16px $red,
+      72px 16px $red,
+      80px 16px $black,
+      
+      8px 24px $black,
+      16px 24px $black,
+      24px 24px $white,
+      32px 24px $red,
+      40px 24px $red,
+      48px 24px $red,
+      56px 24px $red,
+      64px 24px $red,
+      72px 24px $red,
+      80px 24px $black,
+      
+      0 32px $black,
+      8px 32px $white,
+      16px 32px $white,
+      24px 32px $white,
+      32px 32px $white,
+      40px 32px $red,
+      48px 32px $black,
+      56px 32px $black,
+      64px 32px $black,
+      72px 32px $black,
+      80px 32px $black,
+      88px 32px $black,
+      
+      8px 40px $black,
+      16px 40px $black,
+      24px 40px $red,
+      32px 40px $red,
+      40px 40px $red,
+      48px 40px $skin,
+      56px 40px $black,
+      64px 40px $black,
+      72px 40px $black,
+      80px 40px $black,
+      88px 40px $black,
+      96px 40px $black,
+      
+      16px 48px $black,
+      24px 48px $skin,
+      32px 48px $black,
+      40px 48px $skin,
+      48px 48px $skin,
+      56px 48px $black,
+      64px 48px $skin,
+      72px 48px $skin,
+      80px 48px $black,
+      88px 48px $black,
+      96px 48px $black,
+      
+      16px 56px $black,
+      24px 56px $skin,
+      32px 56px $black,
+      40px 56px $skin,
+      48px 56px $skin,
+      56px 56px $black,
+      64px 56px $skin,
+      72px 56px $skin,
+      80px 56px $black,
+      88px 56px $black,
+      
+      16px 64px $black,
+      24px 64px $skin,
+      32px 64px $skin,
+      40px 64px $skin,
+      48px 64px $skin,
+      56px 64px $skin,
+      64px 64px $skin,
+      72px 64px $skin,
+      80px 64px $black,
+      
+      24px 72px $black,
+      32px 72px $skin,
+      40px 72px $skin,
+      48px 72px $skin,
+      56px 72px $skin,
+      64px 72px $black,
+      72px 72px $black,
+      80px 72px $purple,
+      88px 72px $black,
+      
+      32px 80px $black,
+      40px 80px $black,
+      48px 80px $black,
+      56px 80px $black,
+      64px 80px $black,
+      72px 80px $black,
+      80px 80px $purple,
+      88px 80px $black,
+      
+      16px 88px $black,
+      24px 88px $black,
+      32px 88px $black,
+      40px 88px $black,
+      48px 88px $black,
+      56px 88px $black,
+      64px 88px $skin,
+      72px 88px $skin,
+      80px 88px $black,
+      88px 88px $black,
+      
+      8px 96px $black,
+      16px 96px $blue,
+      24px 96px $blue,
+      32px 96px $black,
+      40px 96px $teal,
+      48px 96px $teal,
+      56px 96px $black,
+      64px 96px $skin,
+      72px 96px $skin,
+      80px 96px $black,
+      88px 96px $blue,
+      96px 96px $black,
+      
+      16px 104px $black,
+      24px 104px $blue,
+      32px 104px $blue,
+      40px 104px $black,
+      48px 104px $black,
+      56px 104px $black,
+      64px 104px $black,
+      72px 104px $black,
+      80px 104px $blue,
+      88px 104px $blue,
+      96px 104px $black,
+      
+      24px 112px $black,
+      32px 112px $black,
+      40px 112px $black,
+      80px 112px $black,
+      88px 112px $black,
+      96px 112px $black;
+      
+  }
+}
+
+.pokemon {
+  position: absolute;
+  top: calc(70vh - 100px);
+  left: 50%;
+  animation: bob 0.3s alternate infinite; 
+  animation-timing-function: ease-out;
+   &:after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    box-shadow:
+      32px 0 $black,
+      40px 0 $black,
+      48px 0 $black,
+      56px 0 $black,
+      136px 0 $black,
+      
+      24px 8px $black,
+      32px 8px $orange,
+      40px 8px $orange,
+      48px 8px $orange,
+      56px 8px $dark-orange,
+      64px 8px $black,
+      128px 8px $black,
+      136px 8px $red,
+      144px 8px $black,
+      
+      16px 16px $black,
+      24px 16px $orange,
+      32px 16px $orange,
+      40px 16px $orange,
+      48px 16px $orange,
+      56px 16px $orange,
+      64px 16px $dark-orange,
+      72px 16px $black,
+      128px 16px $black,
+      136px 16px $red,
+      144px 16px $red,
+      152px 16px $black,
+      
+      16px 24px $black,
+      24px 24px $orange,
+      32px 24px $orange,
+      40px 24px $orange,
+      48px 24px $orange,
+      56px 24px $orange,
+      64px 24px $orange,
+      72px 24px $black,
+      128px 24px $black,
+      136px 24px $red,
+      144px 24px $red,
+      152px 24px $black,
+      
+      8px 32px $black,
+      16px 32px $orange,
+      24px 32px $orange,
+      32px 32px $orange,
+      40px 32px $orange,
+      48px 32px $orange,
+      56px 32px $orange,
+      64px 32px $orange,
+      72px 32px $dark-orange,
+      80px 32px $black,
+      120px 32px $black,
+      128px 32px $red,
+      136px 32px $red,
+      144px 32px $red,
+      152px 32px $black,
+      
+      0 40px $black,
+      8px 40px $orange,
+      16px 40px $orange,
+      24px 40px $orange,
+      32px 40px $orange,
+      40px 40px $white,
+      48px 40px $black,
+      56px 40px $orange,
+      64px 40px $orange,
+      72px 40px $dark-orange,
+      80px 40px $black,
+      112px 40px $black,
+      120px 40px $red,
+      128px 40px $red,
+      136px 40px $dark-orange,
+      144px 40px $red,
+      152px 40px $red,
+      160px 40px $black,
+      
+      0 48px $black,
+      8px 48px $orange,
+      16px 48px $orange,
+      24px 48px $orange,
+      32px 48px $orange,
+      40px 48px $black,
+      48px 48px $black,
+      56px 48px $orange,
+      64px 48px $dark-orange,
+      72px 48px $dark-orange,
+      80px 48px $dark-orange,
+      88px 48px $black,
+      112px 48px $black,
+      120px 48px $red,
+      128px 48px $dark-orange,
+      136px 48px $yellow,
+      144px 48px $dark-orange,
+      152px 48px $red,
+      160px 48px $black,
+      
+      0 56px $black,
+      8px 56px $orange,
+      16px 56px $orange,
+      24px 56px $orange,
+      32px 56px $orange,
+      40px 56px $black,
+      48px 56px $black,
+      56px 56px $orange,
+      64px 56px $dark-orange,
+      72px 56px $dark-orange,
+      80px 56px $dark-orange,
+      88px 56px $black,
+      112px 56px $black,
+      120px 56px $red,
+      128px 56px $dark-orange,
+      136px 56px $yellow,
+      144px 56px $dark-orange,
+      152px 56px $red,
+      160px 56px $black,
+      
+      8px 64px $black,
+      16px 64px $dark-orange,
+      24px 64px $orange,
+      32px 64px $orange,
+      40px 64px $orange,
+      48px 64px $orange,
+      56px 64px $dark-orange,
+      64px 64px $dark-orange,
+      72px 64px $dark-orange,
+      80px 64px $dark-orange,
+      88px 64px $dark-orange,
+      96px 64px $black,
+      120px 64px $black,
+      128px 64px $yellow,
+      136px 64px $yellow,
+      144px 64px $black,
+      152px 64px $black,
+      
+      16px 72px $black,
+      24px 72px $black,
+      32px 72px $dark-orange,
+      40px 72px $dark-orange,
+      48px 72px $dark-orange,
+      56px 72px $dark-orange,
+      64px 72px $dark-orange,
+      72px 72px $dark-orange,
+      80px 72px $dark-orange,
+      88px 72px $dark-orange,
+      96px 72px $dark-orange,
+      104px 72px $black,
+      120px 72px $black,
+      128px 72px $dark-orange,
+      136px 72px $black,
+      
+      24px 80px $black,
+      32px 80px $black,
+      40px 80px $black,
+      48px 80px $dark-orange,
+      56px 80px $dark-orange,
+      64px 80px $black,
+      72px 80px $dark-orange,
+      80px 80px $dark-orange,
+      88px 80px $dark-orange,
+      96px 80px $dark-orange,
+      104px 80px $black,
+      120px 80px $black,
+      128px 80px $dark-orange,
+      136px 80px $black,
+      
+      32px 88px $black,
+      40px 88px $yellow,
+      48px 88px $yellow,
+      56px 88px $black,
+      64px 88px $orange,
+      72px 88px $orange,
+      80px 88px $dark-orange,
+      88px 88px $dark-orange,
+      96px 88px $dark-orange,
+      104px 88px $black,
+      120px 88px $black,
+      128px 88px $dark-orange,
+      136px 88px $black,
+      
+      32px 96px $black,
+      40px 96px $yellow,
+      48px 96px $yellow,
+      56px 96px $yellow,
+      64px 96px $black,
+      72px 96px $black,
+      80px 96px $dark-orange,
+      88px 96px $dark-orange,
+      96px 96px $dark-orange,
+      104px 96px $black,
+      112px 96px $black,
+      120px 96px $dark-orange,
+      128px 96px $dark-orange,
+      136px 96px $black,
+      
+      24px 104px $black,
+      32px 104px $white,
+      40px 104px $yellow,
+      48px 104px $yellow,
+      56px 104px $yellow,
+      64px 104px $dark-orange,
+      72px 104px $dark-orange,
+      80px 104px $dark-orange,
+      88px 104px $dark-orange,
+      96px 104px $dark-orange,
+      104px 104px $dark-orange,
+      112px 104px $dark-orange,
+      120px 104px $dark-orange,
+      128px 104px $black,
+      
+      32px 112px $black,
+      40px 112px $black,
+      48px 112px $black,
+      56px 112px $orange,
+      64px 112px $orange,
+      72px 112px $dark-orange,
+      80px 112px $dark-orange,
+      88px 112px $dark-orange,
+      96px 112px $dark-orange,
+      104px 112px $dark-orange,
+      112px 112px $dark-orange,
+      120px 112px $black,
+      
+      56px 120px $black,
+      64px 120px $black,
+      72px 120px $black,
+      80px 120px $dark-orange,
+      88px 120px $dark-orange,
+      96px 120px $dark-orange,
+      104px 120px $black,
+      112px 120px $black,
+      
+      64px 128px $black,
+      72px 128px $white,
+      80px 128px $dark-orange,
+      88px 128px $white,
+      96px 128px $black,
+      104px 128px $black,
+      
+      72px 136px $black,
+      80px 136px $black,
+      88px 136px $black,
+  }  
+}
+
+@keyframes bob {
+   0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(50%);
+  }
+}
