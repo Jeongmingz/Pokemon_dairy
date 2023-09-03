@@ -359,3 +359,24 @@ body.modal-active {
 	color: var(--font-color);
 	cursor: pointer;
   } 
+
+
+
+
+
+  /*  */
+
+
+.videoContainer{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	overflow: hidden;
+	text-align: center;
+}
+
+.videoContainer video{
+	max-height: 100%;
+	max-width: 100%;
+}
