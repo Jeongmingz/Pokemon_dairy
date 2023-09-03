@@ -1,3 +1,15 @@
+@font-face { /* 애플산돌고딕 폰트 적용 */
+	font-family: "pokemonh";
+	src: url("../font/PokemonH.ttf") format("truetype");
+	font-weight: normal;
+  } /* 이후 "SDGothic"으로 폰트 적용 가능 */
+@font-face { /* 애플산돌고딕 폰트 적용 */
+	font-family: "pokemons";
+	src: url("../font/PokemonS.ttf") format("truetype");
+	font-weight: normal;
+  } /* 이후 "SDGothic"으로 폰트 적용 가능 */
+
+
 * {
 	box-sizing: border-box;
 	margin: 0;
