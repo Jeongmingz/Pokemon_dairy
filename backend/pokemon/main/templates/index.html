@@ -1,32 +1,22 @@
+{% extends 'header.html' %}
+
+
 {% load static %}
 {% load i18n %}
 
-<!DOCTYPE html>
-<html lang="kr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- index style css -->
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    
-    <title>POKEMON-Dairy</title>
-</head>
-<body style="background-color: gray;">
+{% block 'content'%}
     <div class="videoContainer">
         <video id="video" width="auto" height="100%" src="https://packaged-media.redd.it/qraadmnv2je41/pb/m2-res_720p.mp4?m=DASHPlaylist.mpd&v=1&e=1692889200&s=a2d238ef4cb99468c27d2b2eabc1448de9ba0f75#t=0" alt="" autoplay loop muted></video>
-     </div>
-             
-     <div class="content h-100">
+    </div>
+            
+    <div class="content h-100">
         <h1>{% translate '포켓몬스터 띠부실 다이어리' %}</h1>
         <div class="buttons">
-          <span id="one" class="btn bg-black bg-opacity-50 text-white fw-bold">{% translate '로그인'%}</span>
+        <span id="one" class="btn bg-black bg-opacity-50 text-white fw-bold">{% translate '로그인'%}</span>
         </div>
-      </div>
-     
+    </div>
+    
         
         <div id="modal-container">
             <div class="modal-background">
@@ -50,8 +40,7 @@
                                         <div class="flip-card__front">
                                             <div class="title">Log in</div>
                                             <form action="{% url 'login' %}" class="flip-card__form" method="POST">
-											    {% csrf_token %}
-
+                                                {% csrf_token %}
                                                 <input type="email" placeholder="Email" name="email" class="flip-card__input">
                                                 <input type="password" placeholder="Password" name="password" class="flip-card__input">
                                                 <button type="submit" class="flip-card__btn">Go! Pokemon!</button>
@@ -60,7 +49,7 @@
                                         <div class="flip-card__back">
                                             <div class="title">Sign up</div>
                                             <form action="{% url 'signup' %}" class="flip-card__form" method="POST">
-											    {% csrf_token %}
+                                                {% csrf_token %}
 
                                                 <input type="name" placeholder="Name" name="name" class="flip-card__input">
                                                 <input type="email" placeholder="Email" name="email" class="flip-card__input">
@@ -105,7 +94,4 @@
                 </div>
             </div>
         {% endif%}
-    <script src="{% static 'js/test.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
-</html>
+{% endblock %}

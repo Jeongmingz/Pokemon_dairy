@@ -11,14 +11,12 @@ class Timecolumn(models.Model):
         abstract = True
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, nickname, password=None):
-        
+    def create_user(self, email, password=None):
         if not email:
             raise ValueError(_('Users must have an email address'))
 
         user = self.model(
             email=self.normalize_email(email), # 회원가입시 email 형식에 대한 validation 실시
-            nickname=nickname,
         )
 
         user.set_password(password)
@@ -50,7 +48,8 @@ class User(AbstractBaseUser, PermissionsMixin, Timecolumn):
     nickname = models.TextField(
         db_column='user_nickname',
         verbose_name=_('user_nickname'),
-        unique=True,
+        null=True,
+        blank=True,
     )
     name = models.CharField(
         db_column='user_name',
@@ -63,7 +62,7 @@ class User(AbstractBaseUser, PermissionsMixin, Timecolumn):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['nickname', 'name',]
+    REQUIRED_FIELDS = ['name',]
 
     class Meta:
         verbose_name = _('user')

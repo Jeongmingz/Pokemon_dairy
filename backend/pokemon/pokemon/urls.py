@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from main.views import *
 from django.urls import path, include
-from main.views import pokemon_index, login_action, signup_action
+from main.views import pokemon_index
+from users.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,6 @@ urlpatterns = [
 
     path('login', login_action, name='login'),
     path('signup', signup_action, name='signup'),
+    path('logout', user_logout, name='logout'),
 
 ]
